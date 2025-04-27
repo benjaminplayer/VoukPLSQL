@@ -1,0 +1,31 @@
+DECLARE
+    ime VARCHAR2(10) := 'Benjamin';
+    priimek VARCHAR2(10) := 'Biscak';
+    bivalisce varchar2(20) := 'Dol pri Vogljah';
+BEGIN
+    DBMS_OUTPUT.PUT_LINE(ascii(substr(ime,0, 1)));
+    DBMS_OUTPUT.PUT_LINE(chr(70));
+    DBMS_OUTPUT.PUT_LINE(concat(ime,priimek));
+    DBMS_OUTPUT.PUT_LINE(INITCAP(bivalisce));
+    DBMS_OUTPUT.PUT_LINE(instr(priimek,'sc'));
+    DBMS_OUTPUT.PUT_LINE(instrb(bivalisce,'pri'));
+    DBMS_OUTPUT.PUT_LINE(length(bivalisce));
+    DBMS_OUTPUT.PUT_LINE(lengthb(priimek));
+    DBMS_OUTPUT.PUT_LINE(lower(bivalisce));
+    DBMS_OUTPUT.PUT_LINE(lpad(priimek, 3));
+    DBMS_OUTPUT.PUT_LINE(ltrim(bivalisce, 5));
+    DBMS_OUTPUT.PUT_LINE(NLS_INITCAP(ime));
+    DBMS_OUTPUT.PUT_LINE(NLS_LOWER(bivalisce));
+    DBMS_OUTPUT.PUT_LINE(NLS_UPPER(priimek));
+    DBMS_OUTPUT.PUT_LINE(NLSSORT(priimek));
+    DBMS_OUTPUT.PUT_LINE(NVL(ime, 'NULL'));
+    --DBMS_OUTPUT.PUT_LINE(NVL2(ime, ime, 'NULL'));
+    DBMS_OUTPUT.PUT_LINE(REPLACE('jamin', ime, 'jomin'));
+    DBMS_OUTPUT.PUT_LINE(RPAD(ime, 5));
+    DBMS_OUTPUT.PUT_LINE(RTRIM(priimek, 2));
+    DBMS_OUTPUT.PUT_LINE(SOUNDEX(ime));
+    DBMS_OUTPUT.PUT_LINE(SUBSTR(bivalisce,0,4));
+    DBMS_OUTPUT.PUT_LINE(substrb(bivalisce,1,2));
+    DBMS_OUTPUT.PUT_LINE(TRIM(priimek));
+    DBMS_OUTPUT.PUT_LINE(UPPER(priimek));
+END;
